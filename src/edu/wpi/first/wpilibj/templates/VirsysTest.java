@@ -27,14 +27,16 @@ public class VirsysTest extends SimpleRobot {
     
     public void robotInit() {
         rd = new RobotDrive(CHANNEL_FRONT_LEFT, CHANNEL_REAR_LEFT, CHANNEL_FRONT_RIGHT, CHANNEL_REAR_RIGHT);
+        rd.setSafetyEnabled(false);
     }
     
     /**
      * This function is called once each time the robot enters autonomous mode.
      */
     public void autonomous() {
+        getWatchdog().setEnabled(false);
         System.out.println("Running auton");
-        rd.tankDrive(0.1, -0.1);
+        rd.tankDrive(1, -1);
         Timer.delay(0.5);
         rd.tankDrive(0, 0);
     }

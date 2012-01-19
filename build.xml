@@ -27,6 +27,24 @@
     <property file="${user.home}/.sunspotfrc.properties"/>
     <import file="${sunspot.home}/build.xml"/>
 
+    <target name="virsysj" depends="init,link-virsysj,compile,run-virsysj" /><!--,-set-selector-for-nonbasestation,-do-find-spots,-pre-test,-do-test,-post-test" description="Run your application with the net console for tests."/>-->
+
+        
+    <target name="link-virsysj">
+        <var name="user.classpath" value="VIRSYSJ/VirsysJ/src" />
+    </target>
+    
+    <target name="run-virsysj">
+        <java
+            dir="${user.classpath}"
+            classname="cRIOhardware.CRIO">
+            <classpath>
+                <pathelement location="${user.classpath}" />
+                <pathelement location="." />
+            </classpath>
+        </java>
+        
+    </target>
     <!--
 
     This file imports the master build file for compiling and deploying sunspot
