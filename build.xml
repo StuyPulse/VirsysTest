@@ -31,7 +31,7 @@
 
         
     <target name="link-virsysj">
-        <var name="user.classpath" value="VIRSYSJ/VirsysJ/src" />
+        <var name="user.classpath" value="VIRSYSJ/VirsysJ" />
     </target>
     
     <target name="run-virsysj">
@@ -39,8 +39,9 @@
             dir="${user.classpath}"
             classname="cRIOhardware.CRIO">
             <classpath>
-                <pathelement location="${user.classpath}" />
+                <pathelement location="${user.classpath}/src" />
                 <pathelement location="." />
+                <pathelement location="${user.classpath}/build/classes" />
             </classpath>
         </java>
         
