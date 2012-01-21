@@ -18,15 +18,13 @@ import edu.wpi.first.wpilibj.*;
  * directory.
  */
 public class VirsysTest extends SimpleRobot {
-    final int CHANNEL_FRONT_LEFT             = 7;
-    final int CHANNEL_FRONT_RIGHT            = 9;
-    final int CHANNEL_REAR_LEFT              = 8;
-    final int CHANNEL_REAR_RIGHT             = 10;
+    public static final int LEFT_CHANNEL             = 1;
+    public static final int RIGHT_CHANNEL            = 2;
     
     RobotDrive rd;
     
     public void robotInit() {
-        rd = new RobotDrive(CHANNEL_FRONT_LEFT, CHANNEL_REAR_LEFT, CHANNEL_FRONT_RIGHT, CHANNEL_REAR_RIGHT);
+        rd = new RobotDrive(LEFT_CHANNEL, RIGHT_CHANNEL);
         rd.setSafetyEnabled(false);
     }
     
