@@ -5,7 +5,8 @@
 
 package virsysj_only;
 import crio.hardware.CRIO;
-import edu.wpi.first.wpilibj.templates.VirsysTest;
+import edu.stuy.VirsysTest;
+import edu.wpi.first.wpilibj.Client;
 
 /**
  *

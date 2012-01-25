@@ -5,7 +5,7 @@
 package virsysj_only;
 
 import utilities.Channels;
-import edu.wpi.first.wpilibj.templates.VirsysTest;
+import edu.stuy.VirsysTest;
 
 /**
  *
